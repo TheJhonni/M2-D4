@@ -36,19 +36,20 @@ const listNames = [
         Group: 3,
     },
 ]
-    
+
 let waitingList = ["name11", "name12", "name13"];
+let numberTeams = listNames.Group
 
 
 const displayNames = function() {
     let NamesContainer = document.getElementsByClassName("container-fluid")
-    let names = listNames.name
+    const names = listNames.name
     for(let i=0; i<names; i++) {
         NamesContainer.innerHTML += `
         <ul class="list-unstyled card-columns">
         <ul class="row">
-        <li class="col"> name player: ${names[i]}</li>
-        <li class="col"> team player: ${numberTeams[i]}</li>
+        <li class="col"> name player: ${names.name}</li>
+        <li class="col"> team player: ${numberTeams.Group}</li>
         </ul>
         </ul>` ;
     } 
@@ -84,7 +85,6 @@ const createImputRandomPeople = function() {
 
 const createImputRandomTeam = function() {
     let containerInput2 = document.getElementsByClassName(".inputn2")
-    let numberTeams = listNames.Group
     for(let j=0; j<numberTeams; j++) {
         let randomTeam = Math.floor(Math.random) * numberTeams.length;
 
