@@ -72,8 +72,13 @@ const createImputRandomPeople = function() {
         <input type="checkbox" class="custom-control-input" id="p${y}">
         </div>
         
-        <button type="submit" class="btn btn-primary my-1">choose</button> `
-    }    
+        <button type="submit" class="btn btn-primary class2345 my-1">choose</button> `
+    }
+    let inputs1 = document.getElementsByClassName("class2345")
+    for (let j = 0; j < inputs1.length; j++) {
+        const input1 = inputs1[i];
+        input1.addEventListener("change", createImputRandomPeople)
+    } 
 };
 
 
@@ -97,7 +102,12 @@ const createImputRandomTeam = function() {
         </div>
         
         <button type="submit" class="btn btn-primary my-1">choose</button> `
-    }    
+    }
+    let inputs = document.getElementsByClassName("btn-primary")
+    for (let i = 0; i < inputs.length; i++) {
+        const input = inputs[i];
+        input.addEventListener("change", createImputRandomTeam)
+    }
 };
 /* 
 let randomTeam = Math.floor(Math.random) * numberTeams.length; */
